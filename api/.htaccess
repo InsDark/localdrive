@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9]*)$ get.php?fileName=$1
+
