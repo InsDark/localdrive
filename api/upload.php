@@ -1,14 +1,9 @@
 <?php 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $fileObject = $_POST['file'];
-    // $fileName = $_POST['file'];
-    // $let = [1,3,4];
-    // $let[] = $_POST;
-    // echo json_encode($let);
-    // $newPath = explode('\\', $path);
-    // array_shift($newPath);
-    // array_shift($newPath);
-    // $fileName = $newPath[0];
-    move_uploaded_file($fileObject, '/');
-    move_uploaded_file()
+    $filePath = $_FILES['img-file']['tmp_name'];
+    $fileName = $_FILES['img-file']['name'];
+    $res = move_uploaded_file($filePath, "../files/$fileName");
+    if($res == true){
+        header('Location: ./../index.html');
+    }
 }

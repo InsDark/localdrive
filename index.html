@@ -15,15 +15,15 @@
                 <input type="text" name="fileName">
                 <button type="submit">Make Dir</button>
             </div>
-            <div action="" method="post">
-                    <input type="file" id="upload">
+            <form action="./api/upload.php" method="post" enctype="multipart/form-data" >
+                    <input type="file" name="img-file" id="upload" >
                 <button id="fileUploader" type="submit">Upload</button>
-            </div>
+            </form>
         </section>
         <section class="files-container">
         </section>
     </main>
     <script src="https://kit.fontawesome.com/b8ffa0db99.js" crossorigin="anonymous"></script>
-    <script src="./src/js/handlers.js"></script>
+    <script src="./src/js/handler.js"></script>
 </body>
 </html>
